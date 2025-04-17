@@ -1,0 +1,75 @@
+export const en_timetracker = {
+  "timetracker.name": "Employee full name",
+  "timetracker.sessionnum": "Session No.",
+  "timetracker.date": "Date",
+  "timetracker.startat": "Started At",
+  "timetracker.endedat": "Ended At",
+  "timetracker.save": "Save",
+  "timetracker.delete": "Delete Session",
+  "timetracker.deletesuccess": "Session deleted successfully",
+  "timetracker.updatesuccess": "Session updated successfully",
+  "timetracker.monday": "Monday",
+  "timetracker.tuesday": "Tuesday",
+  "timetracker.wednesday": "Wednesday",
+  "timetracker.thursday": "Thursday",
+  "timetracker.friday": "Friday",
+  "timetracker.saturday": "Saturday",
+  "timetracker.sunday": "Sunday",
+  "timetracker.status": "Status",
+  "timetracker.totalHours": "Worked Hours",
+  "timetracker.weekly": "Weekly",
+  "timetracker.daily": "Daily",
+  "timetracker.monthly": "Monthly",
+  "timetracker.yearly": "Yearly",
+  "timetracker.weekend": "Weekend",
+  "timetracker.selectdate": "Select Date",
+  "timetracker.startdate": "Start Date",
+  "timetracker.enddate": "End Date",
+
+  "timetracker.title": "Employees working status",
+  "timetracker.working": "Working",
+  "timetracker.pause": "Pause",
+  "timetracker.finish": "Finished",
+  "timetracker.norecord": "No Record",
+  "timetracker.seeall": "See All",
+
+  "timetracker.absent": "was absent",
+  "timetracker.compare": "Compared to the previous week",
+  "timetracker.workedhours": "Worked Hours",
+  "timetracker.export": "Export time tracking report",
+  "timetracker.edit": "Edit Session's Time",
+  "timetracker.closed": "The office is closed on weekends",
+
+  "timetracker.absent": "is absent",
+  "timetracker.onvacation": "is on Vacation",
+};
+
+export const en_timetracker_session = {
+  "timetracker.session.clockIn": "Clock In",
+  "timetracker.session.clockOut": "Clock Out",
+  "timetracker.session.begin": "Beginning of The Session",
+  "timetracker.session.end": "End of The Session",
+  "timetracker.session.number": "Session Number",
+  "timetracker.session.session": "Session",
+  "timetracker.session.nomanual": "User didn't clock out manually",
+  "timetracker.session.manual": "Session added manually",
+};
+
+export const en_vacation = {
+  "timetracker.vacation.day.requested": "Days Requested",
+  "timetracker.vacation.details": "Details",
+  "timetracker.vacation.reason": "Reason",
+  "timetracker.vacation.from": "From",
+  "timetracker.vacation.to": "To",
+};
+
+export const en_timetracker_stepper = {
+  "timetracker.steper.vacation": "Vacations",
+  "timetracker.steper.phone": "Phone Number",
+  "timetracker.steper.absence": "Absence",
+  "timetracker.steper.edocs": "E-documents",
+  // "timetracker.steper.history": "Requests History",
+  "timetracker.steper.history": "Phone Number Requests History",
+  "timetracker.steper.reports": "Time Tracking Reports",
+  "timetracker.steper.infos": "Account Information",
+};

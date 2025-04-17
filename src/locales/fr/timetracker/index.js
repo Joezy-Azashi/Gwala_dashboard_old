@@ -1,0 +1,81 @@
+export const fr_timetracker = {
+  "timetracker.name": "Nom complet",
+  "timetracker.sessionnum": "Numéro de session",
+  "timetracker.date": "Date",
+  "timetracker.startat": "Commencé à",
+  "timetracker.endedat": "Terminé à",
+  "timetracker.save": "Enregistrer",
+  "timetracker.delete": "Supprimer la session",
+  "timetracker.deletesuccess": "Session supprimée avec succès",
+  "timetracker.updatesuccess": "Session mise à jour avec succès",
+  "timetracker.monday": "Lundi",
+  "timetracker.tuesday": "Mardi",
+  "timetracker.wednesday": "Mercredi",
+  "timetracker.thursday": "Jeudi",
+  "timetracker.friday": "Vendredi",
+  "timetracker.saturday": "Samedi",
+  "timetracker.sunday": "Dimanche",
+  "timetracker.status": "Statut",
+  "timetracker.totalHours": "Heures travaillées",
+  "timetracker.weekly": "Hebdomadaire",
+  "timetracker.daily": "Quotidien",
+  "timetracker.monthly": "Mensuel",
+  "timetracker.yearly": "Annuel",
+  "timetracker.weekend": "Week-end",
+  "timetracker.selectdate": "Sélectionner une date",
+  "timetracker.startdate": "Date de début",
+  "timetracker.enddate": "Date de fin",
+
+  "timetracker.title": "Statut des collaborateurs",
+  "timetracker.working": "Actif",
+  "timetracker.pause": "Pause",
+  "timetracker.finish": "Terminé",
+  "timetracker.norecord": "Aucun enregistrement",
+  "timetracker.seeall": "Voir tout",
+
+  "timetracker.daily": "Quotidien",
+  "timetracker.weekly": "Hebdomadaire",
+  "timetracker.monthly": "Mensuel",
+  "timetracker.yearly": "Annuel",
+  "timetracker.absent": "est absent",
+  "timetracker.compare": "V. la semaine précédente",
+  "timetracker.workedhours": "Heures travaillées",
+  "timetracker.export": "Exporter le rapport de suivi du temps",
+  "timetracker.edit": "Modifier l'heure de la session",
+  "timetracker.closed": "Le bureau est fermé le week-end",
+
+  "timetracker.absent": "est absent",
+  "timetracker.onvacation": "est en vacances",
+};
+
+export const fr_timetracker_session = {
+  "timetracker.session.clockIn": "Commencé",
+  "timetracker.session.clockOut": "Finir",
+  "timetracker.session.begin": "Début de la session",
+  "timetracker.session.end": "Fin de la session",
+  "timetracker.session.number": "Numéro de session",
+  "timetracker.session.session": "Session",
+  "timetracker.session.nomanual": "L'utilisateur n'a pas pointé manuellement",
+  "timetracker.session.manual": "Session ajoutée manuellement",
+};
+
+export const fr_vacation = {
+  "timetracker.vacation.day.requested": "Jours demandés",
+  "timetracker.vacation.details": "Détails",
+  "timetracker.vacation.reason": "Motif",
+  "timetracker.vacation.number": "Numéro de session",
+  "timetracker.vacation.from": "De",
+  "timetracker.vacation.to": "À",
+};
+
+export const fr_timetracker_stepper = {
+  "timetracker.steper.vacation": "Congés",
+  "timetracker.steper.phone": "Numéro de téléphone",
+  "timetracker.steper.absence": "Absence",
+  "timetracker.steper.edocs": "E-documents",
+  // "timetracker.steper.history": "Historique des demandes",
+  "timetracker.steper.history":
+    "Historique des demandes de numéros de téléphone",
+  "timetracker.steper.reports": "Rapports de suivi du temps",
+  "timetracker.steper.infos": "Informations du compte",
+};

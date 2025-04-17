@@ -1,0 +1,16 @@
+export const fr_home = {
+  "statsgeneral.home": "Statistiques générales",
+  "statstransaction.home": "Statistiques des transactions",
+  "statsnombre.home": "Statistiques du nombre vérifiés",
+  "statsNombreVerifie.home": "Vérifié",
+  "statsNombreNotVerifie.home": "Non vérifié",
+  "lasttransactions.home": "Dernières transactions",
+  "last30d.home": "Affichage : Les 30 derniers jours",
+  "last15d.home": "Affichage : Les 15 derniers jours",
+  "last7d.home": "Affichage : Les 7 derniers jours",
+  "stats.employees": "Collaborateurs",
+  "stats.activeemployees": "Collaborateurs vérifiés",
+  "stats.advances": "Avances (ce mois-ci)",
+  "stats.admins": "Administrateurs",
+  "stats.seeAll": "Voir Tout",
+};

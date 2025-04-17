@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gwaladashboard-deploy
+  namespace: prod
+  labels:
+    app: gwaladashboard
+spec:
+  replicas: 3 # number of pods
+  selector:
+    matchLabels:
+      app: gwaladashboard
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: gwaladashboard
+    spec:
+      containers:
+        - name: gwaladashboard
+          image: gwalaregistry.azurecr.io/gwaladashboard
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            timeoutSeconds: 120
+            periodSeconds: 30
+            successThreshold: 1
+            failureThreshold: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            timeoutSeconds: 30
+            periodSeconds: 60
+            successThreshold: 1
+            failureThreshold: 5
+

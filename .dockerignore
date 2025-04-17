@@ -1,0 +1,8 @@
+**/node_modules/
+**/dist
+manifests
+manifests-prod
+.github
+.idea
+.git
+node_modules

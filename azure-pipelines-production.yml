@@ -1,0 +1,82 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+name: $(Build.SourceBranchName)_$(Date:yyyyMMdd).$(Build.BuildId)
+
+trigger:
+  branches:
+    include:
+      - master
+
+pr: none
+
+resources:
+  - repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '3712bdb7-a195-4131-b41e-ea9270c6d38a'
+  imageRepository: 'gwaladashboard'
+  containerRegistry: 'gwalaregistry.azurecr.io'
+  dockerfilePath: '**/DockerfileProd'
+  tag: '$(Build.BuildNumber)'
+  imagePullSecret: 'gwalaregistry1002bc28-auth'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool: 'gwala-agents'
+    steps:
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+      env:
+        DOCKER_BUILDKIT: 1
+
+    - upload: manifests-prod
+      artifact: manifests-prod
+
+- stage: Deploy
+  displayName: Deploy stage
+  dependsOn: Build
+
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy
+    pool: 'gwala-agents'
+    environment: 'gwala1Dashboard.prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: KubernetesManifest@0
+            displayName: Create imagePullSecret
+            inputs:
+              action: createSecret
+              secretName: $(imagePullSecret)
+              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+
+          - task: KubernetesManifest@0
+            displayName: Deploy to Kubernetes cluster
+            inputs:
+              action: deploy
+              manifests: |
+                $(Pipeline.Workspace)/manifests-prod/deployment.yml
+                $(Pipeline.Workspace)/manifests-prod/service.yml
+                $(Pipeline.Workspace)/manifests-prod/ingress.yml
+              imagePullSecrets: |
+                $(imagePullSecret)
+              containers: |
+                $(containerRegistry)/$(imageRepository):$(tag)
+

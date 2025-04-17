@@ -1,0 +1,17 @@
+export const en_companysettings = {
+    "settings.enterprise": "Enterprise",
+    "settings.phone": "Phone Number",
+    "settings.email": "Email",
+    "settings.address": "Address",
+    "settings.timetracking": "Time Tracking",
+    "settings.geotracking": "Geo Tracking",
+    "settings.advances": "Advances",
+    "settings.monetization": "Monetization Method",
+    "settings.advanceapproval": "Advance Approval",
+    "settings.on": "On",
+    "settings.off": "Off",
+    "settings.active": "Active",
+    "settings.inactive": "Inactive",
+    "settings.automatic": "Automatic",
+    "settings.manual": "Manual",
+  };
